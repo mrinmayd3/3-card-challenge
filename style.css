@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+:root {
+  --primary-Bright-orange: hsl(31, 77%, 52%);
+  --primary-Dark-cyan: hsl(184, 100%, 22%);
+  --primary-Very-dark-cyan: hsl(179, 100%, 13%);
+
+  --neutral-Transparent-white: hsla(0, 0%, 100%, 0.75);
+  --neutral-Very-light-gray: hsl(0, 0%, 95%);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: var(--neutral-Very-light-gray);
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 15px;
+}
+
+main {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  width: 60%;
+  height: 450px;
+}
+
+.container > :nth-child(1) {
+  background-color: var(--primary-Bright-orange);
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+}
+
+.container > :nth-child(2) {
+  background-color: var(--primary-Dark-cyan);
+}
+
+.container > :nth-child(3) {
+  background-color: var(--primary-Very-dark-cyan);
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+}
+
+.container > div {
+  padding: 45px;
+}
+
+.container > div > h2 {
+  font-size: 2.5rem;
+  padding: 20px 0;
+  text-transform: uppercase;
+  color: var(--neutral-Very-light-gray);
+  font-family: 'Big Shoulders Display', cursive;
+}
+
+.container > div > p {
+  color: var(--neutral-Transparent-white);
+  margin-bottom: 30px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background-color: var(--neutral-Very-light-gray);
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 15px;
+  margin-top: 55px;
+  cursor: pointer;
+}
+
+.btn1 {
+  color: var(--primary-Bright-orange);
+}
+.btn2 {
+  color: var(--primary-Dark-cyan);
+}
+.btn3 {
+  color: var(--primary-Very-dark-cyan);
+}
+
+/* Mobile */
+
+@media (max-width: 1200px) {
+  .container {
+    flex-direction: row;
+    width: 80%;
+  }
+}
+
+@media (max-width: 950px) {
+  .container {
+    flex-direction: column;
+    width: 80%;
+  }
+
+  .container > :nth-child(1) {
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 7px;
+  }
+
+  .container > :nth-child(3) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 7px;
+    border-bottom-left-radius: 7px;
+  }
+}
+
+@media (max-width: 375px) {
+  .container {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .btn {
+    margin-top: 20px;
+  }
+}
